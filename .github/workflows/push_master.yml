@@ -15,7 +15,7 @@ jobs:
     name: Install and do Formatting checks
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout applicaion branch sing githun action
+      - name: Checkout applicaion branch sing github action
         uses: actions/checkout@v2 #created by github community
       - name: Setup Node 18
         uses: actions/setup-node@v2
@@ -29,7 +29,7 @@ jobs:
         run: npm run format-check
   deploy:
     needs: checks
-    runs-on: ubuntu-latest #githun action m/c
+    runs-on: ubuntu-latest #github action m/c
     steps:
       - name: Check if S3 bucket exists
         run: |
@@ -39,7 +39,7 @@ jobs:
             echo "Bucket ${{ env.AWS_S3_BUCKET }} does not exist"
             aws s3api create-bucket --bucket ${{ env.AWS_S3_BUCKET }} --region ${{ env.AWS_DEFAULT_REGION }}
           fi
-      - name: githun action checking out code
+      - name: github action checking out code
         uses: actions/checkout@v2
       - name: Deploy to S3
         uses: jakejarvis/s3-sync-action@master
