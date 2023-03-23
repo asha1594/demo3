@@ -1,0 +1,24 @@
+{
+  "name": "demo3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write \"src/**/*.js\"",
+    "format-check": "prettier --list-different 'src/**/*.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asha1594/demo3.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/asha1594/demo3/issues"
+  },
+  "homepage": "https://github.com/asha1594/demo3#readme",
+  "dependencies": {
+    "prettier": "^2.8.6"
+  }
+}
